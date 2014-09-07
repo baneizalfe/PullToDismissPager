@@ -4,6 +4,13 @@ PullToDismissPager is an Adroid Open Source Libray for showing ViewPager in simi
 
 ![Screenshot](/screenshot.jpg)
 
+Download the source to use it as a library project or use it directly from Maven Central in your dependencies.  For example:
+
+	dependencies {
+		compile 'com.github.baneizalfe.pulltodismisspager:library:1.0.0'
+	}
+
+
 ### Usage
 * Include `com.mrbug.pulltodismisspager.PullToDismissPager` as the root element in your activity layout.
 * The layout must have `gravity` set to either `top` or `bottom`.
