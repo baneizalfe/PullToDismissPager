@@ -46,7 +46,7 @@ pagerAdapter = new SlidingPagerAdapter(this);
 pull_to_dismiss_pager.setPagerAdapter(pagerAdapter);
 ```
 ###ToDo
-Make it available via Gradle
+Add some easing to animations
 ### Licence
 
 > Licensed under the Apache License, Version 2.0 (the "License");
