@@ -22,9 +22,6 @@ allprojects {
 
     repositories {
         jcenter()
-        maven { url 'https://oss.sonatype.org/content/groups/public' }
     }
 
 }
-
-apply plugin: 'android-reporting'
