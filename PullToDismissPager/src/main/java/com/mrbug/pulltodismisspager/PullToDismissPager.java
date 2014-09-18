@@ -46,13 +46,6 @@ public class PullToDismissPager extends ViewGroup {
     private static final int DEFAULT_MIN_FLING_VELOCITY = 400; // dips per second
 
     /**
-     * Default attributes for layout
-     */
-    private static final int[] DEFAULT_ATTRS = new int[] {
-            android.R.attr.gravity
-    };
-
-    /**
      * Minimum velocity that will be detected as a fling
      */
     private int mMinFlingVelocity = DEFAULT_MIN_FLING_VELOCITY;
@@ -222,21 +215,16 @@ public class PullToDismissPager extends ViewGroup {
         }
 
         if (attrs != null) {
-            TypedArray defAttrs = context.obtainStyledAttributes(attrs, DEFAULT_ATTRS);
-
-            if (defAttrs != null) {
-                int gravity = defAttrs.getInt(0, Gravity.NO_GRAVITY);
-                if (gravity != Gravity.TOP && gravity != Gravity.BOTTOM) {
-                    throw new IllegalArgumentException("gravity must be set to either top or bottom");
-                }
-                mIsSlidingUp = gravity == Gravity.BOTTOM;
-            }
-
-            defAttrs.recycle();
 
             TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.PullToDismissPager);
 
             if (ta != null) {
+
+                int gravity = ta.getInt(0, Gravity.BOTTOM);
+                if (gravity != Gravity.TOP && gravity != Gravity.BOTTOM) {
+                    throw new IllegalArgumentException("gravity must be set to either top or bottom");
+                }
+                mIsSlidingUp = gravity == Gravity.BOTTOM;
 
                 mMinFlingVelocity = ta.getInt(R.styleable.PullToDismissPager_flingVelocity, DEFAULT_MIN_FLING_VELOCITY);
                 mCoveredFadeColor = ta.getColor(R.styleable.PullToDismissPager_fadeColor, DEFAULT_FADE_COLOR);
