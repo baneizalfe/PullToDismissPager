@@ -1,8 +1,7 @@
 <com.mrbug.pulltodismisspager.PullToDismissPager xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/pull_to_dismiss_pager"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="bottom">
+    android:layout_height="match_parent">
 
     <FrameLayout
         android:layout_width="match_parent"
