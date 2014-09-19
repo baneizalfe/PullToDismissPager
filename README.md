@@ -7,13 +7,13 @@ PullToDismissPager is an Adroid Open Source Libray for showing ViewPager in simi
 Download the source to use it as a library project or use it directly from Maven Central in your dependencies.  For example:
 
 	dependencies {
-		compile 'com.github.baneizalfe.pulltodismisspager:library:1.0.0'
+		compile 'com.github.baneizalfe.pulltodismisspager:library:1.0.1'
 	}
 
 
 ### Usage
 * Include `com.mrbug.pulltodismisspager.PullToDismissPager` as the root element in your activity layout.
-* The layout must have `gravity` set to either `top` or `bottom`.
+* No need for gravity attribite anymore. Default is BOTTOM
 * Make sure that it has only on child, your main layout.
 * The main layout should have the width and the height set to `match_parent`.
 For more information, checkout sample code.
@@ -21,8 +21,7 @@ For more information, checkout sample code.
 <com.mrbug.pulltodismisspager.PullToDismissPager xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/pull_to_dismiss_pager"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="bottom">
+    android:layout_height="match_parent">
 
     <FrameLayout
         android:layout_width="match_parent"
