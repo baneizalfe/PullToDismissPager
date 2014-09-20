@@ -14,7 +14,7 @@ Download the source to use it as a library project or use it directly from Maven
 ### Usage
 * Include `com.mrbug.pulltodismisspager.PullToDismissPager` as the root element in your activity layout.
 * No need for gravity attribite anymore. Default is BOTTOM
-* Make sure that it has only on child, your main layout.
+* Make sure that it has only one child, your main layout.
 * The main layout should have the width and the height set to `match_parent`.
 For more information, checkout sample code.
 ```xml
