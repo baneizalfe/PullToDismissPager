@@ -44,7 +44,7 @@ pull_to_dismiss_pager = (PullToDismissPager) findViewById(R.id.pull_to_dismiss_p
 pagerAdapter = new SlidingPagerAdapter(this);
 pull_to_dismiss_pager.setPagerAdapter(pagerAdapter);
 ```
-###ToDo
+### ToDo
 Add some easing to animations
 ### Licence
 
